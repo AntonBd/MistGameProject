@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MistGameProject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MistGameProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MistGameProject-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MistGameProject:war exploded" />
+    </root>
+  </artifact>
+</component>
