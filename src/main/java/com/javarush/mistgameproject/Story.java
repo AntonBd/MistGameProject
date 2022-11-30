@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Story {
     private String storyText = "";
 
-    public String[] getStoryText(int storyId) {
+    public String[] getStoryText(int storyId) throws IOException {
 
         String path = "stories/story-"+storyId+".txt";                      //Конструирование адреса ссылки на историю
         URL resource = getClass().getClassLoader().getResource(path);       //URL папки resource
@@ -20,9 +20,9 @@ public class Story {
                 }
             }
         catch (IOException | NullPointerException e) {
-            storyText = "Возникла ошибка: файл с текстом не найден";
+            throw new IOException("Файл с текстом не найден либо передано пустое значение");
         } catch (URISyntaxException e) {
-            storyText = "Неверный формат адреса ссылки на текст";
+            e.getStackTrace();
         }
 
         String[] inital = storyText.split("\\|");      //Деление текста по знаку |

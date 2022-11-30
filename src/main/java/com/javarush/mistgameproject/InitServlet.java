@@ -23,7 +23,7 @@ public class InitServlet extends HttpServlet {
         int storyId = 0;
         String[] storyText = story.getStoryText(storyId);
 
-        int time = 300;
+        int time = 280;
         int health = 3;
         int weapon = 0;
         int bullets = 1;
